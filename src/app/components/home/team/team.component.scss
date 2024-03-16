@@ -1,0 +1,77 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Mixins
+@mixin shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#mentors .rounded-circle {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+// Estilos para la sección de mentores
+#mentors {
+  .container-fluid {
+    padding: 4rem;
+  }
+
+  .h3 {
+    font-weight: bold;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  .rounded-circle {
+    border-radius: 50%;
+  }
+
+  .shadow {
+    @include shadow;
+  }
+
+  .row {
+    justify-content: center;
+
+    .col-md-3,
+    .col-sm-5 {
+      margin: 1rem;
+      padding: 1.5rem;
+
+      img {
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+
+      h3 {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem; // Reduce el espacio inferior
+      }
+
+      p {
+        text-align: center;
+        color: $secondary-color;
+        margin-bottom: 1rem; // Añade espacio inferior
+      }
+    }
+  }
+
+  // Estilos para la sección de comentarios
+  .comments {
+    text-align: center;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
